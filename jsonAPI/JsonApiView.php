@@ -29,7 +29,12 @@ class JsonApiView extends \Slim\View {
     */
     public $options = 0;
     
-    public function render($status=200) {
+    public function __construct($options = 0) {
+        parent::__construct();
+        $this->options = $options;
+    }
+    
+    public function render($status = 200) {
         $app = \Slim\Slim::getInstance();
 
         $status = intval($status);
