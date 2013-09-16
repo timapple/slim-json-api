@@ -23,6 +23,12 @@
  */
 class JsonApiView extends \Slim\View {
 
+    /**
+    * Bitmask consisting of JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP, JSON_HEX_APOS, JSON_NUMERIC_CHECK, 
+    * JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT, JSON_UNESCAPED_UNICODE.
+    */
+    public $options = 0;
+    
     public function render($status=200) {
         $app = \Slim\Slim::getInstance();
 
@@ -38,7 +44,7 @@ class JsonApiView extends \Slim\View {
 
         $app->response()->status($status);
         $app->response()->header('Content-Type', 'application/json');
-        $app->response()->body(json_encode($this->all()));
+        $app->response()->body(json_encode($this->all(), $this->options));
 
         $app->stop();
     }
