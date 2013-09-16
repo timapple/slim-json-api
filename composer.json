@@ -1,5 +1,5 @@
 {
-    "name": "entomb/slim-json-api",
+    "name": "timapple/slim-json-api",
     "type": "library",
     "version": "1.0.1",
     "description": "Slim extension to implement fast JSON API's",
@@ -11,6 +11,12 @@
             "name": "Jonathan Tavares",
             "email": "the.entomb@gmail.com",
             "homepage": "https://github.com/entomb",
+            "role": "Developer"
+        },
+        {
+            "name": "timapple",
+            "email": "itimapple@gmail.com",
+            "homepage": "https://github.com/timapple",
             "role": "Developer"
         }
     ],
